@@ -5,27 +5,26 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
 </head>
-<style>
-     label {
-          display:block;
-     }
-</style>
 <body>
-     <h3>Input siswa baru</h3>
-
-     <form action="proses.php" method="post">
-          <div>
-               <label for="nama">Nama</label>
-               <input type="text" name="nama" id="nama">
-          </div>
-          <div>
-               <label for="jurusan">Jurusan</label>
-               <input type="text" name="jurusan" id="jurusan">
-          </div>
-          <div>
-               <button type="submit" name="buttonKirim" value= "kirim"> Kirim</button>
-          </div>
+     <h2>Login</h2>
+     <form action="" method="post">
+          <label for="">Username</label>
+          <input type="text" name="username" autocomplete="off">
+          <br>
+          <label for="">Password</label>
+          <input type="password" name="password">
+          <br>
+          <input type="submit" value="login" name="loginButton">
      </form>
 </body>
-</html>
 
+<?php
+     if(isset($_POST['loginButton'])){
+          session_start();
+          $_SESSION['username'] = $_POST['username'];
+          $_SESSION['login'] = true;
+          
+          header("location:proses.php");
+     }
+?>
+</html>
