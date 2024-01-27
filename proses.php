@@ -1,5 +1,5 @@
 <?php
-    require 'ceklogins.php';
+    require 'ceklogin.php';
 
     echo 'anda sukses login';
 ?>
