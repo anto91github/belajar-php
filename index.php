@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
      <meta charset="UTF-8">
@@ -19,12 +19,31 @@
 </body>
 
 <?php
-     if(isset($_POST['loginButton'])){
-          session_start();
-          $_SESSION['username'] = $_POST['username'];
-          $_SESSION['login'] = true;
+     // if(isset($_POST['loginButton'])){
+     //      session_start();
+     //      $_SESSION['username'] = $_POST['username'];
+     //      $_SESSION['login'] = true;
           
-          header("location:proses.php");
-     }
+     //      header("location:proses.php");
+     // }
 ?>
-</html>
+</html> -->
+
+<?php
+require 'Model/Robot.php';
+
+$robot1 = new Robot();
+$robot1->setName('optimus prime');
+$robot1->setColor('blue white red');
+$robot1->setSize('large');
+
+$robot2 = new Robot();
+$robot2->setName('bumblebee');
+$robot2->setColor('yellow');
+$robot2->setSize('medium');
+
+var_dump($robot1);
+echo '<br>';
+var_dump($robot2);
+echo '<br>';
+echo $robot1->getName();
