@@ -30,12 +30,23 @@
 </html> -->
 
 <?php
-require 'Model/Robot.php';
+// require 'Model/Robot.php';
 
-$robot1 = new Robot('optimus prime', 'blue white red', 'large');
-var_dump($robot1);
-echo('<br>');
-unset($robot1); // destroy object
-echo('<br>');
-echo('next line ...');
-echo('<br>');
+// $robot1 = new Robot('optimus prime', 'blue white red', 'large');
+// var_dump($robot1);
+// echo('<br>');
+// unset($robot1); // destroy object
+// echo('<br>');
+// echo('next line ...');
+// echo('<br>');
+// echo $robot1->test;
+
+require 'Model/Guru.php';
+
+$guru1 = New Guru('Budi', 39);
+echo $guru1->sayaStatic();
+
+
+
+
+
