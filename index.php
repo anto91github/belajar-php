@@ -32,18 +32,10 @@
 <?php
 require 'Model/Robot.php';
 
-$robot1 = new Robot();
-$robot1->setName('optimus prime');
-$robot1->setColor('blue white red');
-$robot1->setSize('large');
-
-$robot2 = new Robot();
-$robot2->setName('bumblebee');
-$robot2->setColor('yellow');
-$robot2->setSize('medium');
-
+$robot1 = new Robot('optimus prime', 'blue white red', 'large');
 var_dump($robot1);
-echo '<br>';
-var_dump($robot2);
-echo '<br>';
-echo $robot1->getName();
+echo('<br>');
+unset($robot1); // destroy object
+echo('<br>');
+echo('next line ...');
+echo('<br>');
