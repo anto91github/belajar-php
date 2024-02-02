@@ -41,12 +41,25 @@
 // echo('<br>');
 // echo $robot1->test;
 
-require 'Model/Guru.php';
+// require 'Model/Guru.php';
 
-$guru1 = New Guru('Budi', 39);
-echo $guru1->sayaStatic();
+// $guru1 = New Guru('Budi', 39);
+// echo $guru1->sayaStatic();
 
+require 'Model/Traits/Ayam.php';
+require 'Model/Traits/Burung.php';
+require 'Model/Traits/Capung.php';
 
+$ayam = new Ayam();
+$burung = new Burung();
+$capung = new Capung();
 
+echo $ayam->bertelur();
+echo '<br>';
+echo $burung->bertelur();
+echo '<br>';
+echo $burung->terbang();
+echo '<br>';
+echo $capung->terbang();
 
 
